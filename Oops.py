@@ -56,5 +56,16 @@ s="kiets@123"
 output=s.replace("@", "")
 print(output)
 
+#write a python program to print second largest number from a list(without using sort(),max())
+numbers= [10, 20, 4, 45, 99, 99, 45]
+def second_largest(numbers):
+    first = second = float('-inf')
+    for number in numbers:
+        if number > first:
+            second = first
+            first = number
+        elif number > second and number != first:
+            second = number
+    return second
 
 
